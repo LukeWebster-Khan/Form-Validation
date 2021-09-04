@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styling.css" />
+    <link rel="stylesheet" href="/Form-Validation/styling.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,13 +34,13 @@
         </div>
       </div>
       <div class="msg" id="message">
-        <h4>Your password must contain:</h4>
+        <h4>Your Username must contain:</h4>
         <p id='letter' class='invalid'>A lowercase letter</p>
-        <p>An Uppercase letter</p>
-        <p>A Number</p>
-        <p>A minimum of 8 characters</p>
+        <p id='capital' class='invalid'>An Uppercase letter</p>
+        <p id='number' class='invalid'>A Number</p>
+        <p id='length' class="invalid">A minimum of 8 characters</p>
       </div>
     </form>
-    <script src="script.js"></script>
+    <script src="/Form-Validation/script.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+const capital = document.getElementById('capital');
+
 function isUserNameValid(username) {
     /* 
       Usernames can only have: 
@@ -35,6 +37,15 @@ letter.classList.add('valid')
     letter.classList.add('invalid')
 }
 
+// validate capital letter
+let upperCaseLtters = /[A-Z]/g;
+if(myInput.value.match(upperCaseLtters)){
+  capital.classList.remove('invalid');
+  capital.classList.add('valid');
+} else {
+  capital.classList.remove('valid');
+  capital.classList.add('invalid');
+}
 }
 
 
