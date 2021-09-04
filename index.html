@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styling.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Challenge</title>
+  </head>
+  <body>
+    <h2>Forms</h2>
+    <form name="myForm" onSubmit="return validateForm()">
+      <div class="inputs">
+        <p class="name-fr">
+          <label>Name:</label>
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            name="fname"
+            id="inputname"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+        </p>
+        <p class="email-fr">
+          <label>Email:</label>
+          <input type="text" placeholder="Enter Your Email" />
+        </p>
+        <p class="card-fr">
+          <label>Card :</label>
+          <input type="text" placeholder="Enter a Proxy Credit Card Number" />
+        </p>
+        <div class="submit-btn">
+          <button class="submitB">Submit</button>
+        </div>
+      </div>
+      <div class="msg" id="message">
+        <h4>Your password must contain:</h4>
+        <p id='letter' class='invalid'>A lowercase letter</p>
+        <p>An Uppercase letter</p>
+        <p>A Number</p>
+        <p>A minimum of 8 characters</p>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
