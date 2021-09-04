@@ -1,0 +1,62 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.inputs {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(137, 200, 46);
+  border-radius: 20px;
+  padding: 4px;
+  padding-top: 20px;
+  border-style: solid;
+}
+
+.inputs input {
+  border: none;
+  width: 200px;
+  margin: 5px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.submitB {
+  background-color: rgb(231, 0, 100);
+  border-radius: 5px;
+}
+
+label {
+  display: table-cell;
+}
+
+form {
+  display: table;
+}
+
+p {
+  display: table-row;
+}
+
+#message {
+  display: none;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  content: "✖ ";
+}
