@@ -1,5 +1,8 @@
 const capital = document.getElementById("capital");
 const length = document.getElementById("length");
+// onclick for password field, display message
+const myInput = document.getElementById("inputname");
+const Einput = document.getElementById("eInput");
 
 function isUserNameValid(username) {
   /* 
@@ -14,9 +17,6 @@ function isUserNameValid(username) {
   return valid;
 }
 
-// onclick for password field, display message
-let myInput = document.getElementById("inputname");
-
 myInput.onfocus = function () {
   document.getElementById("message").style.display = "block";
 };
@@ -26,7 +26,6 @@ myInput.onblur = function () {
 };
 
 // When user types in field
-
 myInput.onkeyup = function () {
   // validate lowercase letter
   let lowerCaseLetters = /[a-z]/g;
