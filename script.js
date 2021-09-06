@@ -3,7 +3,7 @@ const length = document.getElementById("length");
 // onclick for password field, display message
 const myInput = document.getElementById("inputname");
 const Einput = document.getElementById("eInput");
-const validEmail = document.getElementById('validEmail')
+const validEmail = document.getElementById("validEmail");
 
 function isUserNameValid(username) {
   /* 
@@ -58,19 +58,23 @@ myInput.onkeyup = function () {
   }
 };
 
-eInput.onfocus = function() {
-  document.getElementById('eMsg').style.display = 'block'
-}
+eInput.onfocus = function () {
+  document.getElementById("eMsg").style.display = "block";
+};
 
 eInput.onblur = function () {
   document.getElementById("eMsg").style.display = "none";
 };
 
-let email =/^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
-if (eInput.value.match(email)) {
-  validEmail.classList.remove('invalid');
-  validEmail.classList.add('valid');
-} else {
-  validEmail.classList.remove('valid');
-  validEmail.classList.add('invalid');
-}
+// validate email /[A-Z]/g;       /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+
+Einput.onkeyup = function () {
+  let email = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+  if (eInput.value.match(email)) {
+    validEmail.classList.remove("invalid");
+    validEmail.classList.add("valid");
+  } else {
+    validEmail.classList.remove("valid");
+    validEmail.classList.add("invalid");
+  }
+};
