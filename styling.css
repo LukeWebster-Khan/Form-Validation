@@ -45,6 +45,10 @@ p {
   display: none;
 }
 
+#eMsg {
+  display: none;
+}
+
 .valid {
   color: green;
 }
