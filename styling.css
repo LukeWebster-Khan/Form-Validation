@@ -55,26 +55,37 @@ p {
 #eMsg {
   display: none;
 }
-
+/* css for username input */
 .valid {
   color: green;
 }
 
 .valid:before {
-  content: "✔";
-}
-
-.invalid {
-  color: red;
-}
-#inputname:focus {
-  outline: none !important;
-  border:1px solid red;
-  box-shadow: 0 0 10px #719ECE;
+  content: "✔ Your username is valid!";
 }
 
 .invalid:before {
-  content: "✖ ";
+  content: "❌ Not a valid username";
+  color: red;
+}
+
+.validEmail {
+  color: green;
+}
+
+.validEmail:before {
+  content: "✔ Your email is valid!";
+}
+
+.invalidEmail:before {
+  content: "❌ Not a valid email";
+  color: red;
+}
+
+#inputname:focus {
+  outline: none !important;
+  border: 1px solid red;
+  box-shadow: 0 0 10px #719ece;
 }
 
 .form {
