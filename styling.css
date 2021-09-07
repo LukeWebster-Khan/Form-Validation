@@ -2,13 +2,19 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .inputs {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(137, 200, 46);
   border-radius: 20px;
-  padding: 4px;
+  padding: 20px;
   padding-top: 20px;
   border-style: solid;
   margin-bottom: 175px;
@@ -61,7 +67,24 @@ p {
 .invalid {
   color: red;
 }
+#inputname:focus {
+  outline: none !important;
+  border:1px solid red;
+  box-shadow: 0 0 10px #719ECE;
+}
 
 .invalid:before {
   content: "✖ ";
+}
+
+.form {
+  display: flex;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

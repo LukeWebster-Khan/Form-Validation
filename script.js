@@ -4,6 +4,7 @@ const length = document.getElementById("length");
 const myInput = document.getElementById("inputname");
 const Einput = document.getElementById("eInput");
 const validEmail = document.getElementById("validEmail");
+const creditInput = document.getElementById("creditInput");
 
 function isUserNameValid(username) {
   /* 
@@ -68,13 +69,16 @@ eInput.onblur = function () {
 
 // validate email /[A-Z]/g;       /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
 
-Einput.onkeyup = function () {
+Einput.onblur = function () {
   let email = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
   if (eInput.value.match(email)) {
     validEmail.classList.remove("invalid");
     validEmail.classList.add("valid");
+    validEmail.innerHTML = "Entered email is valid";
   } else {
     validEmail.classList.remove("valid");
     validEmail.classList.add("invalid");
+    validEmail.innerHTML =
+      "Please enter a valid email address such as: user@user.co.uk";
   }
 };
