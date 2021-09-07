@@ -9,44 +9,55 @@
   </head>
   <body>
     <div class="container">
-      <form class="form" name="myForm" onSubmit="return validateForm()">
-        <div class="inputs">
-          <p class="name-fr">
-            <label>Name:</label>
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              name="fname"
-              id="inputname"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            />
-          </p>
-          <p class="email-fr">
-            <label>Email:</label>
-            <input type="text" placeholder="Enter Your Email" id="eInput" />
-          </p>
-          <p class="card-fr">
-            <label>Card :</label>
-            <input
-              id="creditInput"
-              type="text"
-              placeholder="Enter a Proxy Credit Card Number"
-            />
-          </p>
-          <div class="submit-btn">
-            <button class="submitB">Submit</button>
+      <form
+        action="mailto:contact@yourdomain.com"
+        method="get"
+        enctype="text/plain"
+        class="form"
+      >
+        <div class="wrapper">
+          <div class="name-fr">
+            <label for="name"
+              >Name:
+              <input
+                type="text"
+                placeholder="Enter Your Name"
+                name="fname"
+                id="inputname"
+              />
+            </label>
+          </div>
+          <div class="email-fr">
+            <label for="email"
+              >Email:
+              <input type="text" placeholder="Enter Your Email" id="eInput" />
+            </label>
+          </div>
+          <div class="card-fr">
+            <label for="card"
+              >Card :
+              <input
+                id="creditInput"
+                type="text"
+                placeholder="Enter a Proxy Credit Card Number"
+              />
+            </label>
           </div>
         </div>
-        <div class="msg" id="message">
-          <h4 id="userName" class="invalid"></h4>
-        </div>
-        <div id="eMsg">
-          <h4 id="validEmail" class="invalid"></h4>
-        </div>
-        <div style="display: none">
-          <h4>Your Credit card number is invalid</h4>
+        <div>
+          <input type="submit" name="submit" value="send" class="submitB" />
         </div>
       </form>
+
+      <div class="msg" id="message">
+        <h4 id="userName" class="invalid"></h4>
+      </div>
+      <div id="eMsg">
+        <h4 id="userEmail" class="invalidEmail"></h4>
+      </div>
+      <div id="eCard">
+        <h4 id="userCard" class="invalidCard"></h4>
+      </div>
     </div>
     <script src="/Form-Validation/script.js"></script>
   </body>
