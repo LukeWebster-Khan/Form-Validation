@@ -9,12 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <form
-        class="form"
-       
-        name="myForm"
-        onSubmit="return validateForm()"
-      >
+      <form class="form" name="myForm" onSubmit="return validateForm()">
         <div class="inputs">
           <p class="name-fr">
             <label>Name:</label>
@@ -43,10 +38,7 @@
           </div>
         </div>
         <div class="msg" id="message">
-          <h4>Your Username must contain:</h4>
-          <p id="letter" class="invalid">A lowercase letter</p>
-          <p id="capital" class="invalid">An Uppercase letter</p>
-          <p id="length" class="invalid">A minimum of 8 characters</p>
+          <h4 id="userName" class="invalid"></h4>
         </div>
         <div id="eMsg">
           <h4 id="validEmail" class="invalid"></h4>
